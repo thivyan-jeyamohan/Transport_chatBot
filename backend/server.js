@@ -6,7 +6,7 @@ require('dotenv').config();
 const app = express();
 
 // Middleware
-app.use(cors({ origin: 'http://localhost:5173' }));  // Allow requests from the React app on port 5173
+app.use(cors({ origin: process.env.APPLICATION_URL }));  // Allow requests from the React app on port 5173
 app.use(express.json());  // Allows parsing of JSON bodies
 
 // Import routes
